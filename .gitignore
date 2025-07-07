@@ -1,0 +1,34 @@
+# CMake build folders
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Compiled object files, libraries, executables
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.dll
+*.exe
+*.out
+
+# MacOS system files
+.DS_Store
+
+# Editor/IDE files
+*.swp
+*~
+.vscode/
+.idea/
+*.user
+*.sublime-workspace
+*.sublime-project
+
+# Logs
+*.log
+
+# Other
+*.tmp 
