@@ -1,4 +1,3 @@
-// 引入必要的头文件 (假设使用了 Asio 和 WebSocketpp)
 // #include <boost/asio.hpp>
 // #include <websocketpp/config/asio_no_tls.hpp> // 或 asio_tls for SSL
 // #include <websocketpp/server.hpp>
@@ -13,7 +12,7 @@ using json = nlohmann::json;
 #include <mutex>
 #include <queue> // For buffering video frames, input events etc.
 
-// --- 假设的外部组件 ---
+// --- 外部组件 ---
 // A simplified logger
 class Logger {
 public:
@@ -31,7 +30,7 @@ public:
     struct DeviceSession {
         std::string device_id;
         std::string user_id;
-        void* hdl; // 或者你的 HandlerType
+        void* hdl; // 或者 HandlerType
         bool active;
 
         // 默认构造函数
@@ -92,7 +91,7 @@ public:
     }
 };
 
-// 假设的视频处理模块 (FFmpeg 封装)
+// 视频处理模块 (FFmpeg 封装)
 class VideoProcessor {
 public:
     void process_screen_frame(const std::vector<char>& encoded_frame) {
@@ -106,7 +105,7 @@ public:
     }
 };
 
-// 假设的输入事件处理模块
+// 输入事件处理模块
 class InputEventProcessor {
 public:
     void send_input_to_device(const std::string& device_id, const std::string& input_event_json) {
